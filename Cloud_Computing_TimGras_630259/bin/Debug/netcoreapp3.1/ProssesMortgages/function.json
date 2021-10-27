@@ -1,0 +1,16 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions-3.0.13",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "serviceBusTrigger",
+      "connection": "AzureConnectionString",
+      "queueName": "testqueue",
+      "isSessionsEnabled": false,
+      "name": "myQueueItem"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/Cloud_Computing_TimGras_630259.dll",
+  "entryPoint": "Cloud_Computing_TimGras_630259.ProcessMortgages.Run"
+}
