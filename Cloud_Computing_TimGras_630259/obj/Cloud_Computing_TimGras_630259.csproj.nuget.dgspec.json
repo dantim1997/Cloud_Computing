@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj": {}
+    "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj": {
+    "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj",
+        "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj",
         "projectName": "Cloud_Computing_TimGras_630259",
-        "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj",
+        "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj",
         "packagesPath": "C:\\Users\\TG-Kamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\obj\\",
+        "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,21 +21,21 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj"
+              "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj"
+              "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\ServiceLayer\\ServiceLayer.csproj": {
+                "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\ServiceLayer\\ServiceLayer.csproj"
               }
             }
           }
@@ -47,28 +47,44 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
-            "Azure.Messaging.ServiceBus": {
+            "EntityFramework": {
               "target": "Package",
-              "version": "[7.5.0-beta.1, )"
+              "version": "[6.4.4, )"
             },
-            "Microsoft.Azure.Cosmos": {
+            "Microsoft.Azure.Functions.Worker": {
               "target": "Package",
-              "version": "[3.22.0-preview, )"
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Extensions.Http": {
+              "target": "Package",
+              "version": "[3.0.12, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Extensions.ServiceBus": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Extensions.Timer": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Sdk": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Azure.ServiceBus": {
+              "target": "Package",
+              "version": "[5.1.3, )"
             },
             "Microsoft.Azure.WebJobs.Extensions.ServiceBus": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[5.0.0, )"
             },
-            "Microsoft.Azure.WebJobs.Extensions.Storage": {
+            "Microsoft.EntityFrameworkCore.Cosmos": {
               "target": "Package",
-              "version": "[3.0.10, )"
-            },
-            "Microsoft.NET.Sdk.Functions": {
-              "target": "Package",
-              "version": "[3.0.13, )"
+              "version": "[5.0.11, )"
             }
           },
           "imports": [
@@ -90,14 +106,14 @@
         }
       }
     },
-    "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj": {
+    "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\TG-Kamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -107,18 +123,18 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj"
+              "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj"
               }
             }
           }
@@ -130,12 +146,20 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.Azure.Cosmos": {
+            "EntityFramework": {
               "target": "Package",
-              "version": "[3.22.0-preview, )"
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Cosmos": {
+              "target": "Package",
+              "version": "[5.0.11, )"
             }
           },
           "imports": [
@@ -157,14 +181,14 @@
         }
       }
     },
-    "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj": {
+    "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\TG-Kamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -174,15 +198,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -193,12 +217,155 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.Azure.Cosmos": {
+            "EntityFramework": {
               "target": "Package",
-              "version": "[3.22.0-preview, )"
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.Azure.WebJobs.Extensions": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Cosmos": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Helpers\\Helpers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Helpers\\Helpers.csproj",
+        "projectName": "Helpers",
+        "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Helpers\\Helpers.csproj",
+        "packagesPath": "C:\\Users\\TG-Kamer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Helpers\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TG-Kamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\ServiceLayer\\ServiceLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\ServiceLayer\\ServiceLayer.csproj",
+        "projectName": "ServiceLayer",
+        "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\ServiceLayer\\ServiceLayer.csproj",
+        "packagesPath": "C:\\Users\\TG-Kamer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\ServiceLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TG-Kamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\DAL\\DAL.csproj"
+              },
+              "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Helpers\\Helpers.csproj": {
+                "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Helpers\\Helpers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.Azure.ServiceBus": {
+              "target": "Package",
+              "version": "[5.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Cosmos": {
+              "target": "Package",
+              "version": "[5.0.11, )"
             }
           },
           "imports": [
