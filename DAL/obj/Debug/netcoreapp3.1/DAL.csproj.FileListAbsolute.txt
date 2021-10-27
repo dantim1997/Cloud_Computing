@@ -1,0 +1,14 @@
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\bin\Debug\netcoreapp3.1\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\bin\Debug\netcoreapp3.1\Cosmos.CRTCompat.dll
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\DAL\obj\Debug\netcoreapp3.1\DAL.pdb

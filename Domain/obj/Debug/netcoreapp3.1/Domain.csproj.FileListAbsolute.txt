@@ -1,0 +1,11 @@
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\obj\Debug\netcoreapp3.1\Domain.csprojAssemblyReference.cache
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\obj\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\bin\Debug\netcoreapp3.1\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\TG-Kamer\Desktop\projects\Cloud_Computing_TimGras_630259\Domain\bin\Debug\netcoreapp3.1\Cosmos.CRTCompat.dll
