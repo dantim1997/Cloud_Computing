@@ -15,13 +15,11 @@ namespace Cloud_Computing_TimGras_630259
     public class MortgageFunction
     {
         private readonly IMortgageService _MortgageService;
-        private readonly IUserService _UserService;
         private readonly ILogger<MortgageFunction> _Logger;
-        public MortgageFunction(ILogger<MortgageFunction> logger, IMortgageService mortgageService, IUserService userService)
+        public MortgageFunction(ILogger<MortgageFunction> logger, IMortgageService mortgageService)
         {
             _Logger = logger;
             _MortgageService = mortgageService;
-            _UserService = userService;
         }
 
         // Creates batches of Buyers that need to be proccesed to get the mortgages
@@ -33,21 +31,30 @@ namespace Cloud_Computing_TimGras_630259
             _Logger.LogInformation($"{DateTime.Now} The Queue has been created");
         }
 
-        //Servicebus helps with handeling peak loads where a spike in messages might slow down the processing application.
-        [Function("CalculateMortgages")]
-        public void CalculateMortgages([ServiceBusTrigger("ServiceBusName", Connection = "AzureConnectionString")] string myQueueItem, FunctionContext context)
-        {
-            _MortgageService.CreateMortgage(myQueueItem);
-            _Logger.LogInformation($"{DateTime.Now} The Queue has been handled");
-        }
-
         // sends mails to the buyers with thair mortgage calculated
         // Will trigger on 09:00
         [Function("StartMailSending")]
         public async Task StartMailSending([TimerTrigger("0 * * * 1 *")] MyInfo myTimer, ILogger log)
         {
-            await _MortgageService.GetAllMortgages();
-            _Logger.LogInformation($"{DateTime.Now} All mails have been send");
+            try
+            {
+                await _MortgageService.GetAllMortgages();
+                _Logger.LogInformation($"{DateTime.Now} All mails have been send");
+            }
+            catch (Exception e)
+            {
+                _Logger.LogError("{Error}", e.Message);
+                throw;
+            }
+        }
+
+        // sends mails to the buyers with thair mortgage calculated
+        // Will trigger on 23:00
+        [Function("DeleteMortgage")]
+        public async Task DeleteMortgage([TimerTrigger("0 * * * 1 *")] MyInfo myTimer, ILogger log)
+        {
+            await _MortgageService.DeleteMortgageQueue();
+            _Logger.LogInformation($"{DateTime.Now} All Mortgages have been deleted");
         }
     }
 }

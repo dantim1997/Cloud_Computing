@@ -1,10 +1,8 @@
 ﻿using DAL.EF;
 using DAL.Interface;
 using Domain;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL.Repository
@@ -20,15 +18,35 @@ namespace DAL.Repository
 
         public async Task<User> CreateBuyer(User user)
         {
-            _UserContext.Add(user);
+            _UserContext.Add<User>(user);
             await _UserContext.SaveChangesAsync();
             
             return user;
         }
 
+        public async Task<User> EditUser(User user)
+        {
+            _UserContext.Update(user);
+            await _UserContext.SaveChangesAsync();
+
+            return user;
+        }
+
+        public async Task EditUsers(IEnumerable<User> users)
+        {
+            _UserContext.UpdateRange(users);
+            await _UserContext.SaveChangesAsync();
+        }
+
+        public async Task<User> GetUserById(string user)
+        {
+            return _UserContext.Users.Find(user);
+        }
+
         public async Task<IEnumerable<User>> GetAllUsers()
         {
-            return _UserContext.Users;
+            var users = _UserContext.Users.ToList();
+            return users;
         }
     }
 }

@@ -11,6 +11,8 @@ namespace ServiceLayer.Interface
     {
         Task CreateMortgage(string mortgage);
         Task CreateMortgageQueue();
+        Task DeleteMortgage(string queueString);
+        Task DeleteMortgageQueue();
         Task GetAllMortgages();
     }
 }

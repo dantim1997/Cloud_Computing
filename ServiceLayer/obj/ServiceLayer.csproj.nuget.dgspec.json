@@ -47,9 +47,21 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.10.0, )"
+            },
+            "Azure.Storage.Common": {
+              "target": "Package",
+              "version": "[12.9.0, )"
+            },
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"
+            },
+            "Microsoft.Azure.WebJobs.Extensions.Storage": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -176,7 +188,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -188,6 +204,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.24.4, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

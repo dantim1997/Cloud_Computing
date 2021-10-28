@@ -21,8 +21,24 @@ namespace ServiceLayer.Service
         }
         public async Task CreateBuyer(User user)
         {
+            user.id = Guid.NewGuid().ToString();
             var createUser = await _UserRepository.CreateBuyer(user);
             _Logger.LogInformation($"{createUser.Name} has been created as buyer");
+        }
+
+        public async Task<User> GetUserById(string userid)
+        {
+            return await _UserRepository.GetUserById(userid);
+        }
+
+        public async Task<User> EditUser(User user)
+        {
+            return await _UserRepository.EditUser(user);
+        }
+        
+        public async Task EditUsers(IEnumerable<User> users)
+        {
+            await _UserRepository.EditUsers(users);
         }
 
         public async Task<IEnumerable<User>> GetAllUsers()

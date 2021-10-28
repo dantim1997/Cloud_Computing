@@ -9,18 +9,18 @@ namespace DAL.EF
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseCosmos(
-                "https://localhost:8081",
-                "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
-                databaseName: "BuildMyHouseDB");
+               Environment.GetEnvironmentVariable("Account"),
+                Environment.GetEnvironmentVariable("COSMOSDBKEY"),
+                databaseName: Environment.GetEnvironmentVariable("COSMOSDB"));
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>(e =>
             {
-                e.ToContainer(Environment.GetEnvironmentVariable("COSMOSMORTGAGECONTAINER"));
-                e.HasKey(u => u.Id);
+                e.ToContainer(Environment.GetEnvironmentVariable("COSMOSUSERCONTAINER"));
+                e.HasKey(u => u.id);
                 e.HasNoDiscriminator();
-                e.HasPartitionKey(u => u.Id);
+                e.HasPartitionKey(u => u.ZipCode);
                 e.UseETagConcurrency();
             }
             );

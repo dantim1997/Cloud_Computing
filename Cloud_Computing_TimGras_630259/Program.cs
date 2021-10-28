@@ -1,3 +1,4 @@
+using DAL.BlobService;
 using DAL.EF;
 using DAL.Interface;
 using DAL.Repository;
@@ -21,21 +22,19 @@ namespace Cloud_Computing_TimGras_630259
                     // services
                     services.AddTransient<IUserService, UserService>();
                     services.AddTransient<IMortgageService, MortgageService>();
+                    services.AddTransient<IHouseService, HouseService>();
 
                     // repositories
                     services.AddTransient<IUserRepository, UserRepository>();
-                    services.AddTransient<IMortgageRepository, MortgageRepository>();
-
+                    services.AddTransient<IHouseRepository, HouseRepository>();
 
                     //EFContexts
                     services.AddDbContext<UserContext>();
                     services.AddDbContext<MortgageContext>();
+                    services.AddDbContext<HouseContext>();
 
 
-                    // cosmosdb setup
-                    //services.AddSingleton<ICosmosDbService<Message>>(CosmosDbSetup<Message>
-                    //   .InitializeMessageCosmosClientInstanceAsync("MessageContainer")
-                    //  .GetAwaiter().GetResult());
+                    services.AddSingleton<IBlobStorage, BlobStorage>();
                 })
                 .ConfigureFunctionsWorkerDefaults()
                 .Build();

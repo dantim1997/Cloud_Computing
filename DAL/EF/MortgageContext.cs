@@ -16,17 +16,14 @@ namespace DAL.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Mortgage>()
-                .ToContainer(Environment.GetEnvironmentVariable("COSMOSUSERCONTAINER"));
-
-            modelBuilder.Entity<Mortgage>()
-                .HasNoDiscriminator();
-
-            modelBuilder.Entity<Mortgage>()
-                .HasPartitionKey(o => o.id);
-
-            modelBuilder.Entity<Mortgage>()
-                .UseETagConcurrency();
+            modelBuilder.Entity<Mortgage>(e =>
+            {
+                e.ToContainer(Environment.GetEnvironmentVariable("COSMOSMORTGAGECONTAINER"));
+                e.HasKey(u => u.id);
+                e.HasNoDiscriminator();
+                e.HasPartitionKey(u => u.ZipCode);
+                e.UseETagConcurrency();
+            });
         }
     }
 }

@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud_Computing_TimGras_630259", "Cloud_Computing_TimGras_630259\Cloud_Computing_TimGras_630259.csproj", "{5A57E29C-B781-4B8B-AFB3-63F10097A958}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cloud_Computing_TimGras_630259", "Cloud_Computing_TimGras_630259\Cloud_Computing_TimGras_630259.csproj", "{5A57E29C-B781-4B8B-AFB3-63F10097A958}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{56CC2179-970E-4DE5-9131-7E3B07227FB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{56CC2179-970E-4DE5-9131-7E3B07227FB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{36F8EA90-19CD-48F9-ACD1-89CD4AFF1B4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{36F8EA90-19CD-48F9-ACD1-89CD4AFF1B4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{75F93060-6D05-46E8-AECC-0C6E35473C78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{75F93060-6D05-46E8-AECC-0C6E35473C78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{AC679F9C-4154-4597-A087-A3047AB58AE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "Helpers\Helpers.csproj", "{AC679F9C-4154-4597-A087-A3047AB58AE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
