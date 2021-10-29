@@ -3952,11 +3952,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Helpers\\Helpers.csproj",
+      "projectUniqueName": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing\\Helpers\\Helpers.csproj",
       "projectName": "Helpers",
-      "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Helpers\\Helpers.csproj",
+      "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing\\Helpers\\Helpers.csproj",
       "packagesPath": "C:\\Users\\TG-Kamer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Helpers\\obj\\",
+      "outputPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing\\Helpers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3976,8 +3976,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj"
+            "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing\\Domain\\Domain.csproj"
             }
           }
         }

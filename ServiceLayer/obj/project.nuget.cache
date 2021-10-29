@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4rCd4ScmyYYdF+HAyhWEDwaeQwy4WP88zAzLHJERs3C7YOu+6Yub6FkjdZtAltn508WNn/vzl+3JXGKW5rdrfA==",
+  "dgSpecHash": "VzDcjJwDDLHBm/GCiuRJcLAX1Z0jRd2krXbPPt+KHEMcdrxSGPRxJw1PmyiSO/MsT3wmI7ozqdyqS4w1sso/EA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\ServiceLayer\\ServiceLayer.csproj",
+  "projectFilePath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing\\ServiceLayer\\ServiceLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TG-Kamer\\.nuget\\packages\\azure.core\\1.19.0\\azure.core.1.19.0.nupkg.sha512",
     "C:\\Users\\TG-Kamer\\.nuget\\packages\\azure.identity\\1.4.0\\azure.identity.1.4.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E0qgSSbqvPVy9SudVAzvAN0I3w9G6pMrR2N5m0aNnV9d2EpIwzLKzJvAHZX5uo8nxZmubmR7qsCTPs7wkI6f5g==",
+  "dgSpecHash": "aMlvEfu29SrWSyAkK5R2ihPBvJ5iV+nmCWZCcRmWpfY2t7IxtYiv7n0Pr05bu6Dg4XjfWOPeNPOSjImRMM/HWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TG-Kamer\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\TG-Kamer\\.nuget\\packages\\microsoft.azure.cosmos\\3.12.0\\microsoft.azure.cosmos.3.12.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k8a6rGAr0Q0iYD7ai1y4hJsuWAca6WES77/yvvA9IjE5LK1hONbRHGjWrV7ksR2+EDME0GbPS66rYVYUUz9IXQ==",
+  "dgSpecHash": "mVYcUy3kQg0XAhGbluS1wFt5ah6KqGBr+58XHWMOTtRXKMDhFJr44OA6vsorBhU9S9Ctugei6RGqnqpORdHF6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\cloudproject\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj",
+  "projectFilePath": "C:\\Users\\TG-Kamer\\Desktop\\projects\\Cloud_Computing_TimGras_630259\\Cloud_Computing\\Cloud_Computing_TimGras_630259\\Cloud_Computing_TimGras_630259.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TG-Kamer\\.nuget\\packages\\azure.core\\1.20.0\\azure.core.1.20.0.nupkg.sha512",
     "C:\\Users\\TG-Kamer\\.nuget\\packages\\azure.core.amqp\\1.2.0\\azure.core.amqp.1.2.0.nupkg.sha512",
