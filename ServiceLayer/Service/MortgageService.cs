@@ -20,6 +20,9 @@ namespace ServiceLayer.Service
         private readonly IUserService _UserService;
         private readonly IBlobStorage _BlobStorage;
         private readonly ILogger<MortgageService> _Logger;
+        private readonly string _ServiceBusConnectString = Environment.GetEnvironmentVariable("AzureConnectionString");
+        private readonly string _CreateQueueName = Environment.GetEnvironmentVariable("ServiceBusNameCreate");
+        private readonly string _DeleteQueueName = Environment.GetEnvironmentVariable("ServiceBusNameDelete");
 
         public MortgageService(ILogger<MortgageService> logger, IUserService userService, IBlobStorage blobStorage)
         {
@@ -28,6 +31,7 @@ namespace ServiceLayer.Service
             _BlobStorage = blobStorage;
         }
 
+        // create the mortgage pdf with the calculation
         public async Task CreateMortgage(string queueString)
         {
             var userids = System.Text.Json.JsonSerializer.Deserialize<List<string>>(queueString);
@@ -36,7 +40,6 @@ namespace ServiceLayer.Service
             {
                 var user = await _UserService.GetUserById(userid);
                 //calculate mortgage(what they can borrow)
-                //calculation is fake need to find a real one
                 var canLoan = user.Income * 3.52;
                 var mortgage = new Mortgage()
                 {
@@ -56,15 +59,14 @@ namespace ServiceLayer.Service
             }
         }
 
+        // create the queue for the service bus to create the mortgages
         public async Task CreateMortgageQueue()
         {
             var users = await _UserService.GetAllUsers();
 
-            string ServiceBusConnectString = Environment.GetEnvironmentVariable("AzureConnectionString");
-            string QueueName = Environment.GetEnvironmentVariable("ServiceBusName");
-            if (!string.IsNullOrEmpty(QueueName))
+            if (!string.IsNullOrEmpty(_CreateQueueName))
             {
-                IQueueClient client = new QueueClient(ServiceBusConnectString, QueueName);
+                IQueueClient client = new QueueClient(_ServiceBusConnectString, _CreateQueueName);
 
                 //will take batch and give that to the service bus(improve speed)
                 var batchListOfUsers = Helpers.SplitHelper.Split(users.ToList());
@@ -80,6 +82,7 @@ namespace ServiceLayer.Service
             }
         }
 
+        // send all the mortgages
         public async Task GetAllMortgages()
         {
             var users = await _UserService.GetAllUsers();
@@ -88,12 +91,13 @@ namespace ServiceLayer.Service
             {
                 var linkString = await _BlobStorage.GetBlobFromServer(user.FileId);
                 var email = new EmailAddress(user.Email);
-                SendEmail.SendMail(email, "Mortgage", "", $"<a href='{linkString}'>See your mortgage. available till 23:00</a>");
+                SendEmail.SendMail(email, "Mortgage", "", $"<a href='{linkString}'>See your mortgage.</a> available till 23:00");
             }
 
             _Logger.LogInformation($"Send all mails to the Users: {DateTime.Now}");
         }
 
+        // Deletes the mortgage pdfs from the blob server
         public async Task DeleteMortgage(string queueString)
         {
             var fileIds = System.Text.Json.JsonSerializer.Deserialize<List<string>>(queueString);
@@ -105,15 +109,14 @@ namespace ServiceLayer.Service
             _Logger.LogInformation($"{DateTime.Now}: Zet of Mortgage PDFs has been deleted.");
         }
 
+        //reate the queue for the service bus to delete the mortgages
         public async Task DeleteMortgageQueue()
         {
             var users = await _UserService.GetAllUsers();
 
-            string ServiceBusConnectString = Environment.GetEnvironmentVariable("AzureConnectionString");
-            string QueueName = Environment.GetEnvironmentVariable("ServiceBusNameDelete");
-            if (!string.IsNullOrEmpty(QueueName))
+            if (!string.IsNullOrEmpty(_DeleteQueueName))
             {
-                IQueueClient client = new QueueClient(ServiceBusConnectString, QueueName);
+                IQueueClient client = new QueueClient(_ServiceBusConnectString, _DeleteQueueName);
 
                 var usersWithMortgage = users.ToList().Where(a => !string.IsNullOrEmpty(a.FileId)).ToList();
                 //will take batch and give that to the service bus(improve speed)

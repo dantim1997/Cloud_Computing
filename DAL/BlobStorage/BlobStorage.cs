@@ -22,6 +22,7 @@ namespace DAL.BlobService
             _Logger = logger;
         }
 
+        // create the pdf
         public async Task<string> CreateFile(string file, string fileName)
         {
             var containerClient = await GetContainerClient();
@@ -47,6 +48,7 @@ namespace DAL.BlobService
             return $"{fileName}";
         }
 
+        // Get tge pdf download string
         public async Task<string> GetBlobFromServer(string fileName)
         {
             var containerClient = await GetContainerClient();
@@ -54,6 +56,7 @@ namespace DAL.BlobService
             return blob.StorageUri.PrimaryUri.ToString();
         }
 
+        // delete the pdf
         public async Task<bool> DeleteBlobFromServer(string fileName)
         {
             var containerClient = await GetContainerClient();
@@ -63,6 +66,7 @@ namespace DAL.BlobService
             return deleted;
         }
 
+        // init the container
         private async Task<CloudBlobContainer> GetContainerClient()
         {
             // Setup the connection to the storage account
@@ -77,6 +81,7 @@ namespace DAL.BlobService
             return container;
         }
 
+        // from base64 to byte[]
         public static byte[] Decode(string input)
         {
             var output = input;

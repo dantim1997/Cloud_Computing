@@ -8,6 +8,7 @@ namespace Helpers
 {
     public static class SplitHelper
     {
+        // will split the list in even batches given by the amount in enviromentvariables
         public static List<List<T>> Split<T>(List<T> source)
         {
             int maxInBatch = Int32.Parse(Environment.GetEnvironmentVariable("MaxItemsInABatch"));

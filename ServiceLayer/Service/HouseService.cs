@@ -22,22 +22,26 @@ namespace ServiceLayer.Service
             _HouseRepository = houseRepository;
         }
 
+        // create a house
         public async Task<House> CreateHouse(House house)
         {
             house.id = Guid.NewGuid().ToString();
             return await _HouseRepository.CreateHouse(house);
         }
 
+        // get a house by Id
         public House GetHouseById(string id)
         {
             return _HouseRepository.GetHouseById(id);
         }
 
+        // get all the houses from the db
         public IEnumerable<House> GetHouses()
         {
             return _HouseRepository.GetAllHouses();
         }
 
+        // get houses between a price range
         public IEnumerable<House> GetHousesBetweenPrice(int low, int high)
         {
             return _HouseRepository.GetHousesByPriceRange(low, high);

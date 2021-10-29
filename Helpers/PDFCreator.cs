@@ -12,6 +12,7 @@ namespace Helpers
 {
     public static class PDFCreator
     {
+        // creates a pdf based on the mortgage model given
         public static byte[] CreatePDF(Mortgage mortgage)
         {
             Document doc = new Document(PageSize.A4, 50, 50, 50, 50);

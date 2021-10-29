@@ -16,6 +16,7 @@ namespace DAL.Repository
             _HouseContext = userContext;
         }
 
+        // create the house
         public async Task<House> CreateHouse(House house)
         {
             _HouseContext.Add<House>(house);
@@ -24,16 +25,19 @@ namespace DAL.Repository
             return house;
         }
 
+        // get the house by id
         public House GetHouseById(string user)
         {
             return _HouseContext.Houses.Find(user);
         }
 
+        // get the houses by price range
         public IEnumerable<House> GetHousesByPriceRange(int lowPrice, int HighPrice)
         {
             return _HouseContext.Houses.Where(a => a.Price > lowPrice && a.Price < HighPrice).ToList();
         }
 
+        // get all the houses from the db
         public IEnumerable<House> GetAllHouses()
         {
             var users = _HouseContext.Houses.ToList();

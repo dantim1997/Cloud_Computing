@@ -10,13 +10,15 @@ namespace Cloud_Computing_TimGras_630259
     {
         private readonly IMortgageService _MortgageService;
         private readonly ILogger<MortgageFunctionServiceBus> _Logger;
+
+        //Service bus helps with handeling peak loads where a spike in messages might slow down the processing application.
         public MortgageFunctionServiceBus(ILogger<MortgageFunctionServiceBus> logger, IMortgageService mortgageService)
         {
             _Logger = logger;
             _MortgageService = mortgageService;
         }
 
-        //Service bus helps with handeling peak loads where a spike in messages might slow down the processing application.
+        // start calculating the mortgages and upload the pdf
         [Function("CalculateMortgages")]
         public async Task CalculateMortgages([ServiceBusTrigger("testqueue", Connection = "AzureConnectionString")] string myQueueItem, FunctionContext context)
         {
@@ -32,7 +34,7 @@ namespace Cloud_Computing_TimGras_630259
             }
         }
 
-        //Service bus helps with handeling peak loads where a spike in messages might slow down the processing application.
+        // deletes the pdfs when they can no longer be visable
         [Function("DeleteMortgages")]
         public async Task DeleteMortgages([ServiceBusTrigger("deletefilequeue", Connection = "AzureConnectionString")] string myQueueItem, FunctionContext context)
         {

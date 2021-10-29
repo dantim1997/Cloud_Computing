@@ -22,6 +22,7 @@ namespace Cloud_Computing_TimGras_630259
             _HouseService = houseService;
         }
 
+        // Create a house on the database
         [Function("CreateHouse")]
         public async Task<HttpResponseData> CreateHouse([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequestData req,
             FunctionContext executionContext)
@@ -45,6 +46,7 @@ namespace Cloud_Computing_TimGras_630259
             }
         }
 
+        // Get houses between 2 prices
         [Function("GetHousesBetweenPrice")]
         public async Task<HttpResponseData> GetHousesBetweenPrice([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req,
             FunctionContext executionContext, int lowPrice, int highPrice)
@@ -65,6 +67,7 @@ namespace Cloud_Computing_TimGras_630259
             }
         }
 
+        // Get all the houses
         [Function("GetAllHouses")]
         public async Task<HttpResponseData> GetAllHouses([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequestData req,
             FunctionContext executionContext)
@@ -85,6 +88,7 @@ namespace Cloud_Computing_TimGras_630259
             }
         }
 
+        // Get a specific house
         [Function("GetHouseId")]
         public async Task<HttpResponseData> GetHouseId([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequestData req,
             FunctionContext executionContext, string id)

@@ -6,6 +6,7 @@ namespace Helpers
 {
     public static class SendEmail
     {
+        // will send a email
         public static async void SendMail(EmailAddress to, string subject, string plainTextContent, string htmlContent, string b64Content = null, string attachmentName = null)
         {
             var apiKey = Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
