@@ -35,6 +35,22 @@ namespace Cloud_Computing_TimGras_630259
         }
 
         // deletes the pdfs when they can no longer be visable
+        [Function("SendMortgages")]
+        public async Task SendMortgages([ServiceBusTrigger("sendfilequeue", Connection = "AzureConnectionString")] string myQueueItem, FunctionContext context)
+        {
+            try
+            {
+                await _MortgageService.SendEmailWithMortgages(myQueueItem);
+                _Logger.LogInformation($"{DateTime.Now} The Queue has been handled");
+            }
+            catch (Exception e)
+            {
+                _Logger.LogError("{Error}", e.Message);
+                throw;
+            }
+        }
+
+        // deletes the pdfs when they can no longer be visable
         [Function("DeleteMortgages")]
         public async Task DeleteMortgages([ServiceBusTrigger("deletefilequeue", Connection = "AzureConnectionString")] string myQueueItem, FunctionContext context)
         {

@@ -37,7 +37,7 @@ namespace Cloud_Computing_TimGras_630259
         {
             try
             {
-                await _MortgageService.GetAllMortgages();
+                await _MortgageService.SendMortgageQueue();
                 _Logger.LogInformation($"{DateTime.Now} All mails have been send");
             }
             catch (Exception e)

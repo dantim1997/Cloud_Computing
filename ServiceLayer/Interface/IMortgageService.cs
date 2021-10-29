@@ -13,6 +13,7 @@ namespace ServiceLayer.Interface
         Task CreateMortgageQueue();
         Task DeleteMortgage(string queueString);
         Task DeleteMortgageQueue();
-        Task GetAllMortgages();
+        Task SendEmailWithMortgages(string queueString);
+        Task SendMortgageQueue();
     }
 }

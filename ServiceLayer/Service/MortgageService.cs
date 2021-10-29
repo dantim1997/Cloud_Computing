@@ -23,6 +23,7 @@ namespace ServiceLayer.Service
         private readonly string _ServiceBusConnectString = Environment.GetEnvironmentVariable("AzureConnectionString");
         private readonly string _CreateQueueName = Environment.GetEnvironmentVariable("ServiceBusNameCreate");
         private readonly string _DeleteQueueName = Environment.GetEnvironmentVariable("ServiceBusNameDelete");
+        private readonly string _SendQueueName = Environment.GetEnvironmentVariable("ServiceBusNameSend");
 
         public MortgageService(ILogger<MortgageService> logger, IUserService userService, IBlobStorage blobStorage)
         {
@@ -83,18 +84,42 @@ namespace ServiceLayer.Service
         }
 
         // send all the mortgages
-        public async Task GetAllMortgages()
+        public async Task SendEmailWithMortgages(string queueString)
         {
-            var users = await _UserService.GetAllUsers();
+            var userids = System.Text.Json.JsonSerializer.Deserialize<List<string>>(queueString);
             //send all mortgages
-            foreach (var user in users)
+            foreach (var userid in userids)
             {
+                var user = await _UserService.GetUserById(userid);
                 var linkString = await _BlobStorage.GetBlobFromServer(user.FileId);
                 var email = new EmailAddress(user.Email);
                 SendEmail.SendMail(email, "Mortgage", "", $"<a href='{linkString}'>See your mortgage.</a> available till 23:00");
             }
 
             _Logger.LogInformation($"Send all mails to the Users: {DateTime.Now}");
+        }
+
+        // create the queue for the service bus to create the mortgages
+        public async Task SendMortgageQueue()
+        {
+            var users = await _UserService.GetAllUsers();
+
+            if (!string.IsNullOrEmpty(_CreateQueueName))
+            {
+                IQueueClient client = new QueueClient(_ServiceBusConnectString, _SendQueueName);
+
+                //will take batch and give that to the service bus(improve speed)
+                var batchListOfUsers = Helpers.SplitHelper.Split(users.ToList());
+
+                //send user mortgage info to queue to be calculated(what they can borrow)
+                foreach (var batchusers in batchListOfUsers)
+                {
+                    var messageBody = JsonConvert.SerializeObject(batchusers.Select(a => a.id));
+                    var message = new Message(Encoding.UTF8.GetBytes(messageBody));
+                    await client.SendAsync(message);
+                }
+                _Logger.LogInformation($"{DateTime.Now} Mortgage has been calculated for {users.ToList().Count} users.");
+            }
         }
 
         // Deletes the mortgage pdfs from the blob server
